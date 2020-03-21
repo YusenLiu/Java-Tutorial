@@ -13,6 +13,7 @@ In addition to scope variable modifiers, there are also the following usage modi
   • final: A final instance variable is one that must be assigned an initial value, and then can never be assigned a new value after that. 
     If it is a base type, then it is a constant (like the MAX_HEIGHT constant in the Gnome class). If an object variable is final, then it 
     will always refer to the same object (even if that object changes its internal state). 
+     constant values associated with a class should always be declared to be both static and final. 
 
 
 public class Gnome {
