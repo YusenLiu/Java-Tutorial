@@ -1,0 +1,10 @@
+The scope (or visibility) of instance variables can be controlled through the use of the following variable modifiers:
+  • public: Anyone can access public instance variables.
+  • protected: Only methods of the same package or of its subclasses can access protected instance variables.
+  • private: Only methods of the same class (not methods of a subclass) can access private instance variables.
+  
+  • If none of the above modifiers are used, the instance variable is considered friendly. Friendly instance variables can be accessed by any class in the same package. 
+  
+In addition to scope variable modifiers, there are also the following usage modifiers:
+  • static: The static keyword is used to declare a variable that is associated with the class, not with individual instances of that class. Static variables are used to store "global" information about a class (for example, a static variable could be used to maintain the total number of Gnome objects created). Static variables exist even if no instance of their class is created.
+  • final: A final instance variable is one that must be assigned an initial value, and then can never be assigned a new value after that. If it is a base type, then it is a constant (like the MAX_HEIGHT constant in the Gnome class). If an object variable is final, then it will always refer to the same object (even if that object changes its internal state). 
