@@ -1,0 +1,26 @@
+When a method of a class is called, it is invoked on a specific instance of that class and can change the state of that object 
+(except for a static method, which is associated with the class itself). For example, invoking the following method on particular gnome 
+changes its name.
+
+public void renameGnome (String s) {
+  name = s; // Reassign the name instance variable of this gnome.
+}
+
+
+Method Modifiers
+As with instance variables, method modifiers can restrict the scope of a method:
+  • public: Anyone can call public methods.
+  • protected: Only methods of the same package or of subclasses can call a protected method.
+  • private: Only methods of the same class (not methods of a subclass) can call a private method.
+  • If none of the modifiers above are used, then the method is friendly. Friendly methods can only be called by objects of classes 
+    in the same package.
+
+The above modifiers may be preceded by additional modifiers:
+• abstract: A method declared as abstract has no code. The signature of such a method is followed by a semicolon(分号) with no method body.
+  Eg.  public abstract void setHeight (double newHeight);
+
+Abstract methods may only appear within an abstract class.
+  • final: This is a method that cannot be overridden by a subclass.
+  • static: This is a method that is associated with the class itself, and not with a particular instance of the class. 
+    Static methods can also be used to change the state of static variables associated with a class (provided these variables are not 
+    declared to be final). 
