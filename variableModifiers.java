@@ -20,7 +20,7 @@ public class Gnome {
     public String name;
     public int age;
     public Gnome gnomeBuddy;
-    private static boolean magical = false;
+    private boolean magical = false;
     protected double height = 2.6;
     public static final int MAX_HEIGHT = 3;
 
@@ -41,7 +41,7 @@ public class Gnome {
     //methods:
     public static void makeKing(Gnome h){
         h.name = "King " + h.getRealName();
-        magical = true;
+        h.magical = true;
     }
 
     public boolean isMagical(){
@@ -85,9 +85,9 @@ gn's real name is now: King Tom
 Is gn magical now? true
 
 
-Remark: in the book, the author defined "magical" to be: private boolean. However, it's a mistake since in the method makeKing(Gnome h)
-        the method is static. Non-static field 'magical' cannot be referenced from a static context. So I declared "magical" to be static
-        and solved the bug.
+Remark: I made a mistake at first. In the method makeKing(Gnome h), I wrote 'magical = true' instead of 'h.magical = true'.
+        Then it came to an error, since 'magical' is a private boolean. However, the method makeKing(Gnome h) is static. 
+        Non-static field 'magical' cannot be referenced from a static context. So one way to fix this is declaring "magical" to be static.
 
 
 
