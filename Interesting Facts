@@ -1,0 +1,15 @@
+Declaration of an array:
+double[] a = new double[10];
+a, in this case is just a reference, or pointer, to the underlying array object.
+The fact that arrays in Java are objects has an important implication when it comes
+to using array names in assignment statements. For when we write something like b = a; in a Java program, we really mean that b and a 
+now both refer to the same array.
+So, if we then write something like b[3] = 5; then we will also be setting the number a [3] to 5. 
+One way to avoid this is to use clone(). i.e. b = a.clone();
+
+When dealing with an array, out of bounds references have been exploited numerous times by hackersusing a method called 
+  the buffer overflow attack 
+to compromise the security of computer systems written in languages other than Java. 
+
+If an array index is out of bounds, the run-time Java environment signals an error condition.
+  The name of this condition is the ArrayIndexOutOfBoundsException. 
