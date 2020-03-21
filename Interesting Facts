@@ -13,3 +13,25 @@ to compromise the security of computer systems written in languages other than J
 
 If an array index is out of bounds, the run-time Java environment signals an error condition.
   The name of this condition is the ArrayIndexOutOfBoundsException. 
+
+
+Break and Continue:
+The break statement causes the control flow to jump to the next line after the loop or switch to the body containing the break.
+The break statement can also be used in a labeled form to jump out of an outernested loop or switch statement. 
+In this case, it has the syntax - break label;
+where label is a Java identifier that is used to label a loop or switch statement.
+Such a label can only appear at the beginning of the declaration of a loop. There are no other kinds of "go to" statements in Java.
+Eg.
+public static boolean hasZeroEntry (int[][] a) {
+  boolean foundFlag = false;
+  zeroSearch:
+    for (int i=0; i<a.length; i++) {
+      for (int j=0; j<a[i].length; j++) {
+        if (a[i][j] == 0) {
+          foundFlag = true;
+          break zeroSearch;
+        }
+      }
+    }
+  return foundFlag;
+}
