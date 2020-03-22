@@ -23,7 +23,7 @@ public class XYPoint {
     public XYPoint(double xCoor, double yCoor){
         this.x = xCoor;
         this.y = yCoor;
-    }
+    } 
 
     /**
      * Return x-coordinate value.
